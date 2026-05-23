@@ -1,1 +1,2 @@
-# Smart-MCQ-Solver-Challenge-24F2002970
+# Smart-MCQ-Solver-Challenge
+# Aditya Kumar - 24F2002970
