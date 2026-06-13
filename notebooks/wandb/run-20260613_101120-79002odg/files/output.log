@@ -1,0 +1,487 @@
+======================================================================
+Model: TRANSFER LEARNING+GPU
+======================================================================
+Loading FastText embeddings...
+Could not load GloVe, using random initialization
+(Performance will be lower, but still good)
+Tokenizer created: {vocab_size} words in vocabulary
+Using random embeddings (not pretrained)
+
+======================================================================
+MODEL ARCHITECTURE
+======================================================================
+
+
+======================================================================
+Fold 1/1
+======================================================================
+
+Train: 1576 | Val: 424
+input shape: (1576, 300)
+sequence length: 300
+vocab size: 3014
+Building Transfer Learning + GRU model...
+W0000 00:00:1781325767.867951    9188 gpu_device.cc:2365] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+None
+
+ Training Fold 1...
+
+Feature Shape: (1576, 5000)
+======================================================================
+Model: TRANSFER LEARNING+GPU
+======================================================================
+Loading FastText embeddings...
+Could not load GloVe, using random initialization
+(Performance will be lower, but still good)
+Tokenizer created: {vocab_size} words in vocabulary
+Using random embeddings (not pretrained)
+
+======================================================================
+MODEL ARCHITECTURE
+======================================================================
+
+
+======================================================================
+Fold 1/1
+======================================================================
+
+Train: 1576 | Val: 424
+input shape: (1576, 300)
+sequence length: 300
+vocab size: 3014
+Building Transfer Learning + GRU model...
+None
+
+ Training Fold 1...
+
+Class weights: {0: np.float64(1.0684745762711865), 1: np.float64(0.8272965879265092), 2: np.float64(0.90835734870317), 3: np.float64(1.0684745762711865), 4: np.float64(1.2217054263565892)}
+Epoch 1/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m40s[0m 364ms/step - accuracy: 0.1764 - loss: 1.6162 - val_accuracy: 0.2123 - val_loss: 1.6132 - learning_rate: 0.0010
+Epoch 2/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m36s[0m 363ms/step - accuracy: 0.2107 - loss: 1.6079 - val_accuracy: 0.1604 - val_loss: 1.6192 - learning_rate: 0.0010
+Epoch 3/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m36s[0m 362ms/step - accuracy: 0.2303 - loss: 1.5910 - val_accuracy: 0.2759 - val_loss: 1.5627 - learning_rate: 0.0010
+Epoch 4/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m26s[0m 262ms/step - accuracy: 0.2690 - loss: 1.5645 - val_accuracy: 0.2406 - val_loss: 1.5770 - learning_rate: 0.0010
+Epoch 5/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m26s[0m 268ms/step - accuracy: 0.3236 - loss: 1.4809 - val_accuracy: 0.3585 - val_loss: 1.4940 - learning_rate: 0.0010
+Epoch 6/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m29s[0m 291ms/step - accuracy: 0.3706 - loss: 1.4320 - val_accuracy: 0.4057 - val_loss: 1.4852 - learning_rate: 0.0010
+Epoch 7/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 318ms/step - accuracy: 0.4042 - loss: 1.3431 - val_accuracy: 0.4269 - val_loss: 1.3481 - learning_rate: 0.0010
+Epoch 8/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 319ms/step - accuracy: 0.4410 - loss: 1.2836 - val_accuracy: 0.4976 - val_loss: 1.2654 - learning_rate: 0.0010
+Epoch 9/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 319ms/step - accuracy: 0.5000 - loss: 1.2396 - val_accuracy: 0.5071 - val_loss: 1.2539 - learning_rate: 0.0010
+Epoch 10/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 314ms/step - accuracy: 0.5260 - loss: 1.1296 - val_accuracy: 0.5000 - val_loss: 1.1985 - learning_rate: 0.0010
+Epoch 11/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 307ms/step - accuracy: 0.5730 - loss: 1.0611 - val_accuracy: 0.6226 - val_loss: 1.0319 - learning_rate: 0.0010
+Epoch 12/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 388ms/step - accuracy: 0.6212 - loss: 0.9518 - val_accuracy: 0.5991 - val_loss: 1.0448 - learning_rate: 0.0010
+Epoch 13/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m35s[0m 349ms/step - accuracy: 0.6548 - loss: 0.8815 - val_accuracy: 0.7028 - val_loss: 0.9393 - learning_rate: 0.0010
+Epoch 14/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m35s[0m 352ms/step - accuracy: 0.6910 - loss: 0.7990 - val_accuracy: 0.7689 - val_loss: 0.7294 - learning_rate: 0.0010
+Epoch 15/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m29s[0m 297ms/step - accuracy: 0.7563 - loss: 0.6706 - val_accuracy: 0.8019 - val_loss: 0.5242 - learning_rate: 0.0010
+Epoch 16/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 301ms/step - accuracy: 0.7868 - loss: 0.6303 - val_accuracy: 0.8608 - val_loss: 0.4657 - learning_rate: 0.0010
+Epoch 17/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m34s[0m 340ms/step - accuracy: 0.7963 - loss: 0.5751 - val_accuracy: 0.8986 - val_loss: 0.3722 - learning_rate: 0.0010
+Epoch 18/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 305ms/step - accuracy: 0.8071 - loss: 0.5296 - val_accuracy: 0.9033 - val_loss: 0.3742 - learning_rate: 0.0010
+Epoch 19/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 313ms/step - accuracy: 0.8674 - loss: 0.4057 - val_accuracy: 0.9009 - val_loss: 0.3400 - learning_rate: 0.0010
+Epoch 20/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 336ms/step - accuracy: 0.8839 - loss: 0.3656 - val_accuracy: 0.9269 - val_loss: 0.2280 - learning_rate: 0.0010
+Epoch 21/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 326ms/step - accuracy: 0.8890 - loss: 0.3322 - val_accuracy: 0.9198 - val_loss: 0.2873 - learning_rate: 0.0010
+Epoch 22/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 321ms/step - accuracy: 0.8991 - loss: 0.3280 - val_accuracy: 0.9387 - val_loss: 0.2781 - learning_rate: 0.0010
+Epoch 23/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 321ms/step - accuracy: 0.9042 - loss: 0.2747 - val_accuracy: 0.9387 - val_loss: 0.2734 - learning_rate: 0.0010
+Epoch 24/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 315ms/step - accuracy: 0.9016 - loss: 0.2968 - val_accuracy: 0.9646 - val_loss: 0.1962 - learning_rate: 0.0010
+Epoch 25/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 332ms/step - accuracy: 0.9220 - loss: 0.2391 - val_accuracy: 0.9670 - val_loss: 0.1550 - learning_rate: 0.0010
+Epoch 26/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 329ms/step - accuracy: 0.9404 - loss: 0.2129 - val_accuracy: 0.9882 - val_loss: 0.0653 - learning_rate: 0.0010
+Epoch 27/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 320ms/step - accuracy: 0.9067 - loss: 0.3049 - val_accuracy: 0.9646 - val_loss: 0.1144 - learning_rate: 0.0010
+Epoch 28/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 311ms/step - accuracy: 0.9365 - loss: 0.2205 - val_accuracy: 0.9646 - val_loss: 0.1466 - learning_rate: 0.0010
+Epoch 29/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 301ms/step - accuracy: 0.9410 - loss: 0.2148 - val_accuracy: 0.9906 - val_loss: 0.0503 - learning_rate: 0.0010
+Epoch 30/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 302ms/step - accuracy: 0.9429 - loss: 0.1890 - val_accuracy: 0.9882 - val_loss: 0.0593 - learning_rate: 0.0010
+Epoch 31/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 320ms/step - accuracy: 0.9473 - loss: 0.1656 - val_accuracy: 0.9788 - val_loss: 0.0648 - learning_rate: 0.0010
+Epoch 32/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 327ms/step - accuracy: 0.9530 - loss: 0.1519 - val_accuracy: 0.9858 - val_loss: 0.0345 - learning_rate: 0.0010
+Epoch 33/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 316ms/step - accuracy: 0.9575 - loss: 0.1494 - val_accuracy: 0.9906 - val_loss: 0.0391 - learning_rate: 0.0010
+Epoch 34/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m29s[0m 293ms/step - accuracy: 0.9588 - loss: 0.1371 - val_accuracy: 0.9976 - val_loss: 0.0138 - learning_rate: 0.0010
+Epoch 35/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m29s[0m 288ms/step - accuracy: 0.9385 - loss: 0.2130 - val_accuracy: 0.9976 - val_loss: 0.0263 - learning_rate: 0.0010
+Epoch 36/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 336ms/step - accuracy: 0.9626 - loss: 0.1200 - val_accuracy: 0.9835 - val_loss: 0.0354 - learning_rate: 0.0010
+Epoch 37/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m34s[0m 346ms/step - accuracy: 0.9708 - loss: 0.0951 - val_accuracy: 0.9811 - val_loss: 0.1172 - learning_rate: 0.0010
+Epoch 38/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 328ms/step - accuracy: 0.9645 - loss: 0.1322 - val_accuracy: 0.9835 - val_loss: 0.1451 - learning_rate: 0.0010
+Epoch 39/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 316ms/step - accuracy: 0.9499 - loss: 0.1681 - val_accuracy: 0.9811 - val_loss: 0.1328 - learning_rate: 0.0010
+Epoch 40/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 317ms/step - accuracy: 0.9619 - loss: 0.1384 - val_accuracy: 0.9835 - val_loss: 0.0800 - learning_rate: 0.0010
+Epoch 41/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 337ms/step - accuracy: 0.9569 - loss: 0.1387 - val_accuracy: 0.9835 - val_loss: 0.0989 - learning_rate: 0.0010
+Epoch 42/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 363ms/step - accuracy: 0.9693 - loss: 0.1209
+Epoch 42: ReduceLROnPlateau reducing learning rate to 0.0005000000237487257.
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m46s[0m 386ms/step - accuracy: 0.9734 - loss: 0.1020 - val_accuracy: 0.9835 - val_loss: 0.0330 - learning_rate: 0.0010
+Epoch 43/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 380ms/step - accuracy: 0.9810 - loss: 0.0737 - val_accuracy: 0.9835 - val_loss: 0.0847 - learning_rate: 5.0000e-04
+Epoch 44/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 379ms/step - accuracy: 0.9860 - loss: 0.0422 - val_accuracy: 0.9835 - val_loss: 0.0745 - learning_rate: 5.0000e-04
+Epoch 45/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 384ms/step - accuracy: 0.9829 - loss: 0.0554 - val_accuracy: 0.9835 - val_loss: 0.0729 - learning_rate: 5.0000e-04
+
+ Evaluating....
+
+ Transfer Learning + GRU MAP@3: 0.9988
+
+======================================================================
+Model: TRANSFER LEARNING+GPU
+======================================================================
+Loading FastText embeddings...
+Could not load GloVe, using random initialization
+(Performance will be lower, but still good)
+Tokenizer created: {vocab_size} words in vocabulary
+Using random embeddings (not pretrained)
+
+======================================================================
+MODEL ARCHITECTURE
+======================================================================
+
+
+======================================================================
+Fold 1/1
+======================================================================
+
+Train: 1576 | Val: 424
+input shape: (1576, 300)
+sequence length: 300
+vocab size: 3014
+Building Transfer Learning + GRU model...
+None
+
+ Training Fold 1...
+
+Class weights: {0: np.float64(1.0684745762711865), 1: np.float64(0.8272965879265092), 2: np.float64(0.90835734870317), 3: np.float64(1.0684745762711865), 4: np.float64(1.2217054263565892)}
+Epoch 1/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m28s[0m 228ms/step - accuracy: 0.1713 - loss: 1.6153 - val_accuracy: 0.1557 - val_loss: 1.6160 - learning_rate: 0.0010
+Epoch 2/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m21s[0m 214ms/step - accuracy: 0.2183 - loss: 1.6126 - val_accuracy: 0.1651 - val_loss: 1.6066 - learning_rate: 0.0010
+Epoch 3/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m26s[0m 264ms/step - accuracy: 0.2310 - loss: 1.6028 - val_accuracy: 0.3137 - val_loss: 1.5790 - learning_rate: 0.0010
+Epoch 4/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m29s[0m 298ms/step - accuracy: 0.2595 - loss: 1.5511 - val_accuracy: 0.3443 - val_loss: 1.5317 - learning_rate: 0.0010
+Epoch 5/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 316ms/step - accuracy: 0.3077 - loss: 1.4932 - val_accuracy: 0.3231 - val_loss: 1.4798 - learning_rate: 0.0010
+Epoch 6/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 326ms/step - accuracy: 0.3414 - loss: 1.4567 - val_accuracy: 0.3656 - val_loss: 1.4542 - learning_rate: 0.0010
+Epoch 7/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 305ms/step - accuracy: 0.3687 - loss: 1.3932 - val_accuracy: 0.2854 - val_loss: 1.4591 - learning_rate: 0.0010
+Epoch 8/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 300ms/step - accuracy: 0.3991 - loss: 1.3324 - val_accuracy: 0.4009 - val_loss: 1.3896 - learning_rate: 0.0010
+Epoch 9/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m29s[0m 297ms/step - accuracy: 0.4486 - loss: 1.2469 - val_accuracy: 0.4269 - val_loss: 1.2344 - learning_rate: 0.0010
+Epoch 10/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m29s[0m 298ms/step - accuracy: 0.5127 - loss: 1.1515 - val_accuracy: 0.5708 - val_loss: 1.0451 - learning_rate: 0.0010
+Epoch 11/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m29s[0m 296ms/step - accuracy: 0.5431 - loss: 1.0568 - val_accuracy: 0.6344 - val_loss: 0.9423 - learning_rate: 0.0010
+Epoch 12/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 300ms/step - accuracy: 0.5711 - loss: 0.9976 - val_accuracy: 0.5873 - val_loss: 0.9648 - learning_rate: 0.0010
+Epoch 13/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 300ms/step - accuracy: 0.6497 - loss: 0.8842 - val_accuracy: 0.6816 - val_loss: 0.8252 - learning_rate: 0.0010
+Epoch 14/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 300ms/step - accuracy: 0.7145 - loss: 0.7594 - val_accuracy: 0.7476 - val_loss: 0.7234 - learning_rate: 0.0010
+Epoch 15/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 299ms/step - accuracy: 0.7069 - loss: 0.7419 - val_accuracy: 0.7877 - val_loss: 0.6790 - learning_rate: 0.0010
+Epoch 16/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 312ms/step - accuracy: 0.7697 - loss: 0.6279 - val_accuracy: 0.8561 - val_loss: 0.4476 - learning_rate: 0.0010
+Epoch 17/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 322ms/step - accuracy: 0.7963 - loss: 0.5331 - val_accuracy: 0.8467 - val_loss: 0.5038 - learning_rate: 0.0010
+Epoch 18/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 312ms/step - accuracy: 0.8020 - loss: 0.5145 - val_accuracy: 0.7783 - val_loss: 0.5754 - learning_rate: 0.0010
+Epoch 19/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 319ms/step - accuracy: 0.8420 - loss: 0.4366 - val_accuracy: 0.9080 - val_loss: 0.2837 - learning_rate: 0.0010
+Epoch 20/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 321ms/step - accuracy: 0.8699 - loss: 0.3895 - val_accuracy: 0.7972 - val_loss: 0.5587 - learning_rate: 0.0010
+Epoch 21/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 310ms/step - accuracy: 0.8553 - loss: 0.4208 - val_accuracy: 0.8561 - val_loss: 0.3803 - learning_rate: 0.0010
+Epoch 22/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 324ms/step - accuracy: 0.8883 - loss: 0.3362 - val_accuracy: 0.9222 - val_loss: 0.2104 - learning_rate: 0.0010
+Epoch 23/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 334ms/step - accuracy: 0.8909 - loss: 0.3296 - val_accuracy: 0.9410 - val_loss: 0.1833 - learning_rate: 0.0010
+Epoch 24/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m34s[0m 344ms/step - accuracy: 0.9162 - loss: 0.2450 - val_accuracy: 0.9080 - val_loss: 0.2437 - learning_rate: 0.0010
+Epoch 25/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m34s[0m 340ms/step - accuracy: 0.9194 - loss: 0.2565 - val_accuracy: 0.9434 - val_loss: 0.1399 - learning_rate: 0.0010
+Epoch 26/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 334ms/step - accuracy: 0.9194 - loss: 0.2492 - val_accuracy: 0.9646 - val_loss: 0.1126 - learning_rate: 0.0010
+Epoch 27/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 331ms/step - accuracy: 0.9289 - loss: 0.2174 - val_accuracy: 0.9434 - val_loss: 0.1490 - learning_rate: 0.0010
+Epoch 28/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 327ms/step - accuracy: 0.9150 - loss: 0.2740 - val_accuracy: 0.9906 - val_loss: 0.0532 - learning_rate: 0.0010
+Epoch 29/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 334ms/step - accuracy: 0.9410 - loss: 0.1636 - val_accuracy: 0.9976 - val_loss: 0.0359 - learning_rate: 0.0010
+Epoch 30/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 330ms/step - accuracy: 0.9448 - loss: 0.1781 - val_accuracy: 0.9835 - val_loss: 0.0322 - learning_rate: 0.0010
+Epoch 31/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 327ms/step - accuracy: 0.9454 - loss: 0.1776 - val_accuracy: 0.9976 - val_loss: 0.0469 - learning_rate: 0.0010
+Epoch 32/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 327ms/step - accuracy: 0.9397 - loss: 0.1681 - val_accuracy: 0.9953 - val_loss: 0.0353 - learning_rate: 0.0010
+Epoch 33/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 331ms/step - accuracy: 0.9549 - loss: 0.1508 - val_accuracy: 0.9741 - val_loss: 0.0633 - learning_rate: 0.0010
+Epoch 34/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 330ms/step - accuracy: 0.9638 - loss: 0.1078 - val_accuracy: 0.9552 - val_loss: 0.0956 - learning_rate: 0.0010
+Epoch 35/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 325ms/step - accuracy: 0.9518 - loss: 0.1624 - val_accuracy: 0.9741 - val_loss: 0.0989 - learning_rate: 0.0010
+Epoch 36/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 331ms/step - accuracy: 0.9492 - loss: 0.1668 - val_accuracy: 0.9858 - val_loss: 0.0460 - learning_rate: 0.0010
+Epoch 37/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 338ms/step - accuracy: 0.9657 - loss: 0.1029 - val_accuracy: 0.9788 - val_loss: 0.0754 - learning_rate: 0.0010
+Epoch 38/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 338ms/step - accuracy: 0.9600 - loss: 0.1505 - val_accuracy: 0.9764 - val_loss: 0.0738 - learning_rate: 0.0010
+Epoch 39/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m35s[0m 354ms/step - accuracy: 0.9727 - loss: 0.0938 - val_accuracy: 0.9434 - val_loss: 0.1652 - learning_rate: 0.0010
+Epoch 40/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m36s[0m 358ms/step - accuracy: 0.9727 - loss: 0.0964 - val_accuracy: 0.9764 - val_loss: 0.0913 - learning_rate: 0.0010
+Epoch 41/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 334ms/step - accuracy: 0.9689 - loss: 0.1121 - val_accuracy: 0.9929 - val_loss: 0.0236 - learning_rate: 0.0010
+Epoch 42/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 329ms/step - accuracy: 0.9588 - loss: 0.1383 - val_accuracy: 0.9835 - val_loss: 0.0442 - learning_rate: 0.0010
+Epoch 43/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m34s[0m 343ms/step - accuracy: 0.9734 - loss: 0.0815 - val_accuracy: 0.9811 - val_loss: 0.0326 - learning_rate: 0.0010
+Epoch 44/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 321ms/step - accuracy: 0.9549 - loss: 0.1571 - val_accuracy: 0.9835 - val_loss: 0.1046 - learning_rate: 0.0010
+Epoch 45/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m34s[0m 347ms/step - accuracy: 0.9683 - loss: 0.1130 - val_accuracy: 0.9835 - val_loss: 0.1096 - learning_rate: 0.0010
+Epoch 46/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 320ms/step - accuracy: 0.9714 - loss: 0.0925 - val_accuracy: 0.9693 - val_loss: 0.0845 - learning_rate: 0.0010
+Epoch 47/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 311ms/step - accuracy: 0.9721 - loss: 0.0904 - val_accuracy: 0.9835 - val_loss: 0.0664 - learning_rate: 0.0010
+Epoch 48/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 309ms/step - accuracy: 0.9727 - loss: 0.0824 - val_accuracy: 0.9764 - val_loss: 0.1437 - learning_rate: 0.0010
+Epoch 49/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 310ms/step - accuracy: 0.9867 - loss: 0.0488 - val_accuracy: 0.9835 - val_loss: 0.1464 - learning_rate: 0.0010
+Epoch 50/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m33s[0m 335ms/step - accuracy: 0.9848 - loss: 0.0498 - val_accuracy: 0.9552 - val_loss: 0.3031 - learning_rate: 0.0010
+Epoch 51/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m34s[0m 343ms/step - accuracy: 0.9575 - loss: 0.1273 - val_accuracy: 0.9835 - val_loss: 0.1642 - learning_rate: 0.0010
+Epoch 52/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 290ms/step - accuracy: 0.9753 - loss: 0.0948
+Epoch 52: ReduceLROnPlateau reducing learning rate to 0.0005000000237487257.
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 311ms/step - accuracy: 0.9740 - loss: 0.1002 - val_accuracy: 0.9835 - val_loss: 0.1554 - learning_rate: 0.0010
+Epoch 53/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 311ms/step - accuracy: 0.9898 - loss: 0.0378 - val_accuracy: 0.9835 - val_loss: 0.1089 - learning_rate: 5.0000e-04
+Epoch 54/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 277ms/step - accuracy: 0.9822 - loss: 0.0651 - val_accuracy: 0.9835 - val_loss: 0.0979 - learning_rate: 5.0000e-04
+
+ Evaluating....
+
+ Transfer Learning + GRU MAP@3: 0.9953
+
+
+ Evaluating....
+
+ Transfer Learning + GRU MAP@3: 0.9953
+
+======================================================================
+Model: TRANSFER LEARNING+GPU
+======================================================================
+Loading FastText embeddings...
+Could not load GloVe, using random initialization
+(Performance will be lower, but still good)
+Tokenizer created: {vocab_size} words in vocabulary
+Using random embeddings (not pretrained)
+
+======================================================================
+MODEL ARCHITECTURE
+======================================================================
+
+
+======================================================================
+Fold 1/1
+======================================================================
+
+Train: 1576 | Val: 424
+input shape: (1576, 300)
+sequence length: 300
+vocab size: 3014
+Building Transfer Learning + GRU model...
+None
+
+ Training Fold 1...
+
+Class weights: {0: np.float64(1.0684745762711865), 1: np.float64(0.8272965879265092), 2: np.float64(0.90835734870317), 3: np.float64(1.0684745762711865), 4: np.float64(1.2217054263565892)}
+Epoch 1/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m26s[0m 226ms/step - accuracy: 0.2062 - loss: 1.6145 - val_accuracy: 0.3396 - val_loss: 1.6029 - learning_rate: 0.0010
+Epoch 2/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m24s[0m 238ms/step - accuracy: 0.1923 - loss: 1.6142 - val_accuracy: 0.2642 - val_loss: 1.6037 - learning_rate: 0.0010
+Epoch 3/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 302ms/step - accuracy: 0.2024 - loss: 1.6093 - val_accuracy: 0.2901 - val_loss: 1.5976 - learning_rate: 0.0010
+Epoch 4/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 306ms/step - accuracy: 0.2437 - loss: 1.5930 - val_accuracy: 0.2170 - val_loss: 1.5776 - learning_rate: 0.0010
+Epoch 5/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 306ms/step - accuracy: 0.2614 - loss: 1.5573 - val_accuracy: 0.2854 - val_loss: 1.5122 - learning_rate: 0.0010
+Epoch 6/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 306ms/step - accuracy: 0.3001 - loss: 1.4833 - val_accuracy: 0.2618 - val_loss: 1.4709 - learning_rate: 0.0010
+Epoch 7/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 273ms/step - accuracy: 0.3357 - loss: 1.4233 - val_accuracy: 0.4009 - val_loss: 1.4076 - learning_rate: 0.0010
+Epoch 8/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m40s[0m 266ms/step - accuracy: 0.3775 - loss: 1.3711 - val_accuracy: 0.4080 - val_loss: 1.4051 - learning_rate: 0.0010
+Epoch 9/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 317ms/step - accuracy: 0.4213 - loss: 1.2992 - val_accuracy: 0.4363 - val_loss: 1.2963 - learning_rate: 0.0010
+Epoch 10/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m32s[0m 320ms/step - accuracy: 0.4454 - loss: 1.2456 - val_accuracy: 0.4033 - val_loss: 1.3105 - learning_rate: 0.0010
+Epoch 11/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 308ms/step - accuracy: 0.4937 - loss: 1.1524 - val_accuracy: 0.5495 - val_loss: 1.0748 - learning_rate: 0.0010
+Epoch 12/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m34s[0m 344ms/step - accuracy: 0.5438 - loss: 1.0708 - val_accuracy: 0.5542 - val_loss: 1.0143 - learning_rate: 0.0010
+Epoch 13/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 313ms/step - accuracy: 0.5939 - loss: 0.9790 - val_accuracy: 0.6274 - val_loss: 0.9128 - learning_rate: 0.0010
+Epoch 14/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 317ms/step - accuracy: 0.6320 - loss: 0.9203 - val_accuracy: 0.6934 - val_loss: 0.8361 - learning_rate: 0.0010
+Epoch 15/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 381ms/step - accuracy: 0.6580 - loss: 0.8548 - val_accuracy: 0.7052 - val_loss: 0.7766 - learning_rate: 0.0010
+Epoch 16/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m40s[0m 403ms/step - accuracy: 0.7126 - loss: 0.7231 - val_accuracy: 0.7358 - val_loss: 0.6442 - learning_rate: 0.0010
+Epoch 17/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m43s[0m 438ms/step - accuracy: 0.7398 - loss: 0.6444 - val_accuracy: 0.7453 - val_loss: 0.6336 - learning_rate: 0.0010
+Epoch 18/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 377ms/step - accuracy: 0.7678 - loss: 0.5905 - val_accuracy: 0.8349 - val_loss: 0.5308 - learning_rate: 0.0010
+Epoch 19/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m39s[0m 398ms/step - accuracy: 0.8071 - loss: 0.5486 - val_accuracy: 0.8373 - val_loss: 0.4595 - learning_rate: 0.0010
+Epoch 20/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 381ms/step - accuracy: 0.7944 - loss: 0.5273 - val_accuracy: 0.8844 - val_loss: 0.3654 - learning_rate: 0.0010
+Epoch 21/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 376ms/step - accuracy: 0.8401 - loss: 0.4265 - val_accuracy: 0.8679 - val_loss: 0.3921 - learning_rate: 0.0010
+Epoch 22/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 372ms/step - accuracy: 0.8629 - loss: 0.3986 - val_accuracy: 0.8538 - val_loss: 0.3698 - learning_rate: 0.0010
+Epoch 23/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 375ms/step - accuracy: 0.8522 - loss: 0.4036 - val_accuracy: 0.9057 - val_loss: 0.3113 - learning_rate: 0.0010
+Epoch 24/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 379ms/step - accuracy: 0.8712 - loss: 0.3529 - val_accuracy: 0.9033 - val_loss: 0.2976 - learning_rate: 0.0010
+Epoch 25/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 375ms/step - accuracy: 0.9004 - loss: 0.2981 - val_accuracy: 0.9505 - val_loss: 0.1799 - learning_rate: 0.0010
+Epoch 26/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 373ms/step - accuracy: 0.9036 - loss: 0.2872 - val_accuracy: 0.9552 - val_loss: 0.1371 - learning_rate: 0.0010
+Epoch 27/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 372ms/step - accuracy: 0.9175 - loss: 0.2578 - val_accuracy: 0.9245 - val_loss: 0.2091 - learning_rate: 0.0010
+Epoch 28/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 372ms/step - accuracy: 0.9302 - loss: 0.2107 - val_accuracy: 0.9505 - val_loss: 0.1883 - learning_rate: 0.0010
+Epoch 29/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 372ms/step - accuracy: 0.9226 - loss: 0.2446 - val_accuracy: 0.9316 - val_loss: 0.1426 - learning_rate: 0.0010
+Epoch 30/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 372ms/step - accuracy: 0.9150 - loss: 0.2595 - val_accuracy: 0.9434 - val_loss: 0.1412 - learning_rate: 0.0010
+Epoch 31/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 376ms/step - accuracy: 0.9220 - loss: 0.2341 - val_accuracy: 0.9741 - val_loss: 0.0994 - learning_rate: 0.0010
+Epoch 32/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 375ms/step - accuracy: 0.9283 - loss: 0.2389 - val_accuracy: 0.9575 - val_loss: 0.1541 - learning_rate: 0.0010
+Epoch 33/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 369ms/step - accuracy: 0.9448 - loss: 0.1600 - val_accuracy: 0.9646 - val_loss: 0.1604 - learning_rate: 0.0010
+Epoch 34/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m36s[0m 367ms/step - accuracy: 0.9511 - loss: 0.1435 - val_accuracy: 0.9835 - val_loss: 0.0875 - learning_rate: 0.0010
+Epoch 35/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 389ms/step - accuracy: 0.9378 - loss: 0.1746 - val_accuracy: 0.9741 - val_loss: 0.1268 - learning_rate: 0.0010
+Epoch 36/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m39s[0m 395ms/step - accuracy: 0.9505 - loss: 0.1371 - val_accuracy: 0.9764 - val_loss: 0.0769 - learning_rate: 0.0010
+Epoch 37/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 379ms/step - accuracy: 0.9626 - loss: 0.1287 - val_accuracy: 0.9764 - val_loss: 0.1507 - learning_rate: 0.0010
+Epoch 38/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 377ms/step - accuracy: 0.9632 - loss: 0.1028 - val_accuracy: 0.9693 - val_loss: 0.0948 - learning_rate: 0.0010
+Epoch 39/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 379ms/step - accuracy: 0.9524 - loss: 0.1330 - val_accuracy: 0.9764 - val_loss: 0.0681 - learning_rate: 0.0010
+Epoch 40/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 378ms/step - accuracy: 0.9670 - loss: 0.1333 - val_accuracy: 0.9458 - val_loss: 0.1299 - learning_rate: 0.0010
+Epoch 41/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 379ms/step - accuracy: 0.9429 - loss: 0.1829 - val_accuracy: 0.9764 - val_loss: 0.0566 - learning_rate: 0.0010
+Epoch 42/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 387ms/step - accuracy: 0.9721 - loss: 0.1001 - val_accuracy: 0.9835 - val_loss: 0.0725 - learning_rate: 0.0010
+Epoch 43/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 382ms/step - accuracy: 0.9803 - loss: 0.0838 - val_accuracy: 0.9764 - val_loss: 0.0758 - learning_rate: 0.0010
+Epoch 44/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 377ms/step - accuracy: 0.9803 - loss: 0.0846 - val_accuracy: 0.9717 - val_loss: 0.1204 - learning_rate: 0.0010
+Epoch 45/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 379ms/step - accuracy: 0.9530 - loss: 0.1687 - val_accuracy: 0.9764 - val_loss: 0.0837 - learning_rate: 0.0010
+Epoch 46/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 377ms/step - accuracy: 0.9607 - loss: 0.1333 - val_accuracy: 0.9835 - val_loss: 0.0488 - learning_rate: 0.0010
+Epoch 47/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m39s[0m 390ms/step - accuracy: 0.9626 - loss: 0.1141 - val_accuracy: 0.9835 - val_loss: 0.0806 - learning_rate: 0.0010
+Epoch 48/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 376ms/step - accuracy: 0.9746 - loss: 0.0959 - val_accuracy: 0.9764 - val_loss: 0.1138 - learning_rate: 0.0010
+Epoch 49/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 374ms/step - accuracy: 0.9575 - loss: 0.1298 - val_accuracy: 0.9858 - val_loss: 0.0464 - learning_rate: 0.0010
+Epoch 50/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m39s[0m 395ms/step - accuracy: 0.9670 - loss: 0.1115 - val_accuracy: 0.9835 - val_loss: 0.1323 - learning_rate: 0.0010
+Epoch 51/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m40s[0m 407ms/step - accuracy: 0.9803 - loss: 0.0726 - val_accuracy: 0.9835 - val_loss: 0.0702 - learning_rate: 0.0010
+Epoch 52/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 389ms/step - accuracy: 0.9734 - loss: 0.0995 - val_accuracy: 0.9835 - val_loss: 0.0851 - learning_rate: 0.0010
+Epoch 53/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 388ms/step - accuracy: 0.9670 - loss: 0.1144 - val_accuracy: 0.9764 - val_loss: 0.1194 - learning_rate: 0.0010
+Epoch 54/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m40s[0m 402ms/step - accuracy: 0.9626 - loss: 0.1172 - val_accuracy: 0.9764 - val_loss: 0.1317 - learning_rate: 0.0010
+Epoch 55/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m40s[0m 403ms/step - accuracy: 0.9727 - loss: 0.0900 - val_accuracy: 0.9835 - val_loss: 0.0408 - learning_rate: 0.0010
+Epoch 56/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m44s[0m 440ms/step - accuracy: 0.9848 - loss: 0.0491 - val_accuracy: 0.9835 - val_loss: 0.1016 - learning_rate: 0.0010
+Epoch 57/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m39s[0m 391ms/step - accuracy: 0.9753 - loss: 0.0863 - val_accuracy: 0.9929 - val_loss: 0.0237 - learning_rate: 0.0010
+Epoch 58/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m39s[0m 390ms/step - accuracy: 0.9778 - loss: 0.0630 - val_accuracy: 0.9764 - val_loss: 0.0962 - learning_rate: 0.0010
+Epoch 59/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 385ms/step - accuracy: 0.9727 - loss: 0.0872 - val_accuracy: 0.9811 - val_loss: 0.0519 - learning_rate: 0.0010
+Epoch 60/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 386ms/step - accuracy: 0.9740 - loss: 0.0820 - val_accuracy: 0.9835 - val_loss: 0.1120 - learning_rate: 0.0010
+Epoch 61/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 385ms/step - accuracy: 0.9841 - loss: 0.0557 - val_accuracy: 0.9811 - val_loss: 0.0528 - learning_rate: 0.0010
+Epoch 62/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m39s[0m 393ms/step - accuracy: 0.9797 - loss: 0.0642 - val_accuracy: 0.9835 - val_loss: 0.0466 - learning_rate: 0.0010
+Epoch 63/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 382ms/step - accuracy: 0.9765 - loss: 0.0822 - val_accuracy: 0.9835 - val_loss: 0.0566 - learning_rate: 0.0010
+Epoch 64/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 379ms/step - accuracy: 0.9803 - loss: 0.0659 - val_accuracy: 0.9929 - val_loss: 0.0146 - learning_rate: 0.0010
+Epoch 65/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 377ms/step - accuracy: 0.9816 - loss: 0.0657 - val_accuracy: 0.9835 - val_loss: 0.0414 - learning_rate: 0.0010
+Epoch 66/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m38s[0m 388ms/step - accuracy: 0.9803 - loss: 0.0626 - val_accuracy: 0.9835 - val_loss: 0.0462 - learning_rate: 0.0010
+Epoch 67/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m37s[0m 376ms/step - accuracy: 0.9714 - loss: 0.1070 - val_accuracy: 0.9858 - val_loss: 0.0410 - learning_rate: 0.0010
+Epoch 68/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m36s[0m 367ms/step - accuracy: 0.9879 - loss: 0.0340 - val_accuracy: 0.9858 - val_loss: 0.0319 - learning_rate: 0.0010
+Epoch 69/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 305ms/step - accuracy: 0.9879 - loss: 0.0431 - val_accuracy: 0.9835 - val_loss: 0.0455 - learning_rate: 0.0010
+Epoch 70/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 314ms/step - accuracy: 0.9873 - loss: 0.0458 - val_accuracy: 0.9835 - val_loss: 0.0603 - learning_rate: 0.0010
+Epoch 71/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 314ms/step - accuracy: 0.9734 - loss: 0.0739 - val_accuracy: 0.9835 - val_loss: 0.0727 - learning_rate: 0.0010
+Epoch 72/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 286ms/step - accuracy: 0.9945 - loss: 0.0193
+Epoch 72: ReduceLROnPlateau reducing learning rate to 0.0005000000237487257.
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 305ms/step - accuracy: 0.9886 - loss: 0.0426 - val_accuracy: 0.9717 - val_loss: 0.0651 - learning_rate: 0.0010
+Epoch 73/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m30s[0m 305ms/step - accuracy: 0.9759 - loss: 0.0878 - val_accuracy: 0.9858 - val_loss: 0.0345 - learning_rate: 5.0000e-04
+Epoch 74/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 311ms/step - accuracy: 0.9930 - loss: 0.0223 - val_accuracy: 0.9858 - val_loss: 0.0502 - learning_rate: 5.0000e-04
+Epoch 75/500
+[1m99/99[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m31s[0m 314ms/step - accuracy: 0.9943 - loss: 0.0221 - val_accuracy: 0.9835 - val_loss: 0.1035 - learning_rate: 5.0000e-04
+
+ Evaluating....
+
+ Transfer Learning + GRU MAP@3: 0.9965
