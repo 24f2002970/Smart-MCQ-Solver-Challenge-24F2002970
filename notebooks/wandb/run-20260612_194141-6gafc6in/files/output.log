@@ -1,0 +1,977 @@
+======================================================================
+Model: TRANSFER LEARNING+GPU
+======================================================================
+Loading FastText embeddings...
+Could not load GloVe, using random initialization
+(Performance will be lower, but still good)
+Tokenizer created: {vocab_size} words in vocabulary
+Using random embeddings (not pretrained)
+
+======================================================================
+MODEL ARCHITECTURE
+======================================================================
+
+
+======================================================================
+Fold 1/1
+======================================================================
+
+Train: 1576 | Val: 424
+input shape: (1576, 300)
+sequence length: 300
+vocab size: 3014
+Building Transfer Learning + GRU model...
+W0000 00:00:1781273507.630312    2803 gpu_device.cc:2365] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+None
+
+ Training Fold 1...
+
+CUDA available: True
+GPU Name: NVIDIA GeForce RTX 4060 Laptop GPU
+Current Device: 0
+Train dataset shape: (2000, 8)
+Test dataset shape: (500, 7)
+
+Missing values in training dataset:
+id        0
+prompt    0
+A         0
+B         0
+C         0
+D         0
+E         0
+answer    0
+dtype: int64
+
+Missing values in testing dataset:
+id        0
+prompt    0
+A         0
+B         0
+C         0
+D         0
+E         0
+dtype: int64
+
+Training Dataset Answer Distribution:
+answer
+B    490
+C    459
+A    369
+D    358
+E    324
+Name: count, dtype: int64
+
+Percentages:
+answer
+B    24.5
+C    23.0
+A    18.4
+D    17.9
+E    16.2
+Name: count, dtype: float64
+
+Text Length Statistic:
+
+       prompt_length  option_A_len  option_B_len  option_C_len  option_D_len  \
+count    2000.000000   2000.000000   2000.000000   2000.000000    2000.00000
+mean      117.669500    164.091500    166.616500    167.227000     162.56350
+std        44.408674    105.677145    113.829917    105.723674     104.11657
+min        19.000000      1.000000      2.000000      2.000000       1.00000
+25%        87.750000     86.000000     82.000000     88.000000      91.00000
+50%       111.000000    143.000000    151.000000    158.000000     141.00000
+75%       141.000000    234.000000    222.000000    224.000000     231.00000
+max       337.000000    472.000000    662.000000    530.000000     450.00000
+
+       option_E_len
+count   2000.000000
+mean     164.230000
+std      107.777712
+min        2.000000
+25%       84.000000
+50%      144.000000
+75%      224.000000
+max      587.000000
+Common questions prefixes:
+ prompt
+Identify the correct statement: What is the relati    22
+Choose the correct answer: Which of the following     21
+Pick the best possible answer: What is the reason     19
+Identify the correct statement: What is the signif    18
+Pick the best possible answer: What is the relatio    18
+Determine the correct option: What is the relation    18
+Select the most accurate option: What is the reaso    18
+Which of the following is correct? What is the rel    17
+Select the most accurate option: What is the relat    17
+Which of the following is correct? What is the rea    16
+Name: count, dtype: int64
+
+Questions with very similar options (unique_prefixs <3):
+1078
+
+Statistic for correct option A:
+count    369.000000
+mean     181.363144
+std      104.731143
+min        3.000000
+25%      112.000000
+50%      191.000000
+75%      240.000000
+max      409.000000
+Name: option_A_len, dtype: float64
+
+Statistic for correct option B:
+count    490.000000
+mean     171.183673
+std      126.513863
+min        2.000000
+25%       77.000000
+50%      144.000000
+75%      251.000000
+max      545.000000
+Name: option_B_len, dtype: float64
+
+Statistic for correct option C:
+count    459.000000
+mean     182.346405
+std       99.116643
+min        9.000000
+25%      104.000000
+50%      189.000000
+75%      254.000000
+max      395.000000
+Name: option_C_len, dtype: float64
+
+Statistic for correct option D:
+count    358.000000
+mean     180.349162
+std       78.417066
+min       24.000000
+25%      118.250000
+50%      183.000000
+75%      235.000000
+max      403.000000
+Name: option_D_len, dtype: float64
+
+Statistic for correct option E:
+count    324.000000
+mean     199.669753
+std      136.514027
+min       12.000000
+25%      103.000000
+50%      183.000000
+75%      268.000000
+max      587.000000
+Name: option_E_len, dtype: float64
+Total rows involved in duplicates: 344
+
+*** Critical: Do duplicates agree on answer? ****
+
+Question: Choose the correct answer: What are permutation-inversion groups?..
+Appears 3 times
+Answers: ['E' 'E' 'E']
+
+Question: Choose the correct answer: What are permutation-inversion groups? based on the g..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Choose the correct answer: What are the four qualitative levels of crystallinity..
+Appears 3 times
+Answers: ['B' 'B' 'B']
+
+Question: Choose the correct answer: What is Lorentz symmetry or Lorentz invariance in rel..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Choose the correct answer: What is a pycnometer?..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Choose the correct answer: What is magnetic susceptibility? based on the given c..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Choose the correct answer: What is the American Petroleum Institute (API) gravit..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Choose the correct answer: What is the Kutta condition?..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Choose the correct answer: What is the Kutta condition? based on the given conte..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Choose the correct answer: What is the SI base unit of time and how is it define..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Choose the correct answer: What is the SI unit of the physical quantity m/Q? car..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Choose the correct answer: What is the concept of simultaneity in Einstein's boo..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Choose the correct answer: What is the estimated redshift of CEERS-93316, a cand..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Choose the correct answer: What is the information loss paradox in black holes?..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Choose the correct answer: What is the main sequence in astronomy? among the lis..
+Appears 3 times
+Answers: ['C' 'C' 'C']
+
+Question: Choose the correct answer: What is the purpose of measuring the Larmor precessio..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Choose the correct answer: What is the purpose of the proximity-focusing design ..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Choose the correct answer: What is the reason behind the designation of Class L ..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Choose the correct answer: What is the reason for the formation of stars exclusi..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Choose the correct answer: What is the relationship between the Wigner function ..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Choose the correct answer: What is the role of CYCLOIDEA genes in the evolution ..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Choose the correct answer: What is the significance of probability amplitudes in..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Choose the correct answer: What is the significance of the change in slope of th..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Choose the correct answer: What is the term used to describe the proportionality..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Choose the correct answer: Which hand should be used to apply the right-hand rul..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Choose the correct answer: Which of the following statements accurately describe..
+Appears 3 times
+Answers: ['D' 'D' 'D']
+
+Question: Choose the correct answer: Which of the following statements accurately describe..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Choose the correct answer: Who shared the other half of the Nobel Prize with Yoi..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Determine the correct option: How many crystallographic point groups are there i..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Determine the correct option: What are some models that attempt to account for a..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Determine the correct option: What are some models that attempt to account for a..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Determine the correct option: What did Newton adopt after his correspondence wit..
+Appears 3 times
+Answers: ['A' 'A' 'A']
+
+Question: Determine the correct option: What is a Schwarzschild black hole? from the follo..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Determine the correct option: What is a magnetic monopole in particle physics? c..
+Appears 3 times
+Answers: ['E' 'E' 'E']
+
+Question: Determine the correct option: What is a phageome? among the listed options...
+Appears 3 times
+Answers: ['C' 'C' 'C']
+
+Question: Determine the correct option: What is reciprocal length or inverse length? caref..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Determine the correct option: What is the Liouville density? among the listed op..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Determine the correct option: What is the SI base unit of time and how is it def..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Determine the correct option: What is the definition of Atomristor? from the fol..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Determine the correct option: What is the definition of anatomy? based on the gi..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Determine the correct option: What is the effect generated by a spinning superco..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Determine the correct option: What is the main advantage of ferroelectric memris..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Determine the correct option: What is the main focus of cryogenic and noble liqu..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Determine the correct option: What is the piezoelectric strain coefficient for A..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Determine the correct option: What is the purpose of the proximity-focusing desi..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Determine the correct option: What is the reason for recycling rare metals accor..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Determine the correct option: What is the relationship between interstellar and ..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Determine the correct option: What is the relationship between the Hamiltonians ..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Determine the correct option: What is the relationship between the amplitude of ..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Determine the correct option: What is the role of the Higgs boson in the Standar..
+Appears 3 times
+Answers: ['D' 'D' 'D']
+
+Question: Determine the correct option: What is the significance of the high degree of fat..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Determine the correct option: What is water hammer? based on the given context...
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Determine the correct option: Which mathematical function is commonly used to ch..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Determine the correct option: Which of the following statements accurately descr..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Identify the correct statement: What are amorphous ferromagnetic metallic alloys..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Identify the correct statement: What are permutation-inversion groups? based on ..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Identify the correct statement: What are permutation-inversion groups? from the ..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Identify the correct statement: What are the Navier-Stokes equations? based on t..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Identify the correct statement: What can be inferred about the electronic entrop..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Identify the correct statement: What does Earnshaw's theorem state? from the fol..
+Appears 3 times
+Answers: ['D' 'D' 'D']
+
+Question: Identify the correct statement: What is a crossover experiment? based on the giv..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Identify the correct statement: What is a regular polytope?..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Identify the correct statement: What is a transient condensation cloud, also kno..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Identify the correct statement: What is a uniform tiling in the hyperbolic plane..
+Appears 3 times
+Answers: ['D' 'D' 'D']
+
+Question: Identify the correct statement: What is reciprocal length or inverse length? fro..
+Appears 3 times
+Answers: ['E' 'E' 'E']
+
+Question: Identify the correct statement: What is the Droste effect? among the listed opti..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Identify the correct statement: What is the Liouville density? based on the give..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Identify the correct statement: What is the Ozma Problem? among the listed optio..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Identify the correct statement: What is the application of Memristor? among the ..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Identify the correct statement: What is the concept of simultaneity in Einstein'..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Identify the correct statement: What is the definition of an improper rotation? ..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Identify the correct statement: What is the effect generated by a spinning super..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Identify the correct statement: What is the main focus of the Environmental Scie..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Identify the correct statement: What is the main sequence in astronomy? carefull..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Identify the correct statement: What is the mechanism of FTIR? from the followin..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Identify the correct statement: What is the propagation constant in sinusoidal w..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Identify the correct statement: What is the reason for the formation of stars ex..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Identify the correct statement: What is the reason that it is nearly impossible ..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Identify the correct statement: What is the relationship between interstellar an..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Identify the correct statement: What is the relationship between interstellar an..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Identify the correct statement: What is the relationship between the Hamiltonian..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Identify the correct statement: What is the significance of the high degree of f..
+Appears 3 times
+Answers: ['C' 'C' 'C']
+
+Question: Identify the correct statement: What is the spin quantum number?..
+Appears 3 times
+Answers: ['E' 'E' 'E']
+
+Question: Identify the correct statement: What was the aim of the Gravity Probe B (GP-B) m..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Identify the correct statement: Which of the following statements accurately des..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Pick the best possible answer: How do the Lunar Laser Ranging Experiment, radar ..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Pick the best possible answer: What is Martin Heidegger's view on the relationsh..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Pick the best possible answer: What is X-ray pulsar-based navigation (XNAV)? amo..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Pick the best possible answer: What is the Einstein@Home project? based on the g..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Pick the best possible answer: What is the Kelvin-Helmholtz instability and how ..
+Appears 3 times
+Answers: ['A' 'A' 'A']
+
+Question: Pick the best possible answer: What is the Liouville density? among the listed o..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Pick the best possible answer: What is the Liouville density? from the following..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Pick the best possible answer: What is the decay energy for the free neutron dec..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Pick the best possible answer: What is the decay energy for the free neutron dec..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Pick the best possible answer: What is the evidence for the existence of a super..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Pick the best possible answer: What is the evidence for the existence of a super..
+Appears 3 times
+Answers: ['E' 'E' 'E']
+
+Question: Pick the best possible answer: What is the gravitomagnetic interaction? from the..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Pick the best possible answer: What is the main focus of the Environmental Scien..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Pick the best possible answer: What is the metallicity of Kapteyn's star estimat..
+Appears 3 times
+Answers: ['B' 'B' 'B']
+
+Question: Pick the best possible answer: What is the propagation constant in sinusoidal wa..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Pick the best possible answer: What is the proposed name for the field that is r..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Pick the best possible answer: What is the purpose of expressing a map's scale a..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Pick the best possible answer: What is the purpose of measuring the Larmor prece..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Pick the best possible answer: What is the purpose of the proximity-focusing des..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Pick the best possible answer: What is the reason behind the adoption of a logar..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Pick the best possible answer: What is the relationship between the Hamiltonians..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Pick the best possible answer: What is the relationship between the amplitude of..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Pick the best possible answer: What is the significance of the high degree of fa..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Pick the best possible answer: What was Pierre de Fermat's solution to the probl..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Pick the best possible answer: What was the aim of the Gravity Probe B (GP-B) mi..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Pick the best possible answer: What was the aim of the Gravity Probe B (GP-B) mi..
+Appears 3 times
+Answers: ['B' 'B' 'B']
+
+Question: Pick the best possible answer: Which of the following statements accurately desc..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Select the most accurate option: How do the Lunar Laser Ranging Experiment, rada..
+Appears 4 times
+Answers: ['B' 'B' 'B' 'B']
+
+Question: Select the most accurate option: What are permutation-inversion groups? based on..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Select the most accurate option: What are the constituents of cold dark matter?..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Select the most accurate option: What are the two main factors that cause resist..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Select the most accurate option: What did Newton adopt after his correspondence ..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Select the most accurate option: What is Martin Heidegger's view on the relation..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Select the most accurate option: What is a virtual particle? based on the given ..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Select the most accurate option: What is the 'reactive Leidenfrost effect' obser..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Select the most accurate option: What is the Josephson effect? among the listed ..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Select the most accurate option: What is the Kutta condition? carefully...
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Select the most accurate option: What is the Ozma Problem? based on the given co..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Select the most accurate option: What is the definition of an improper rotation?..
+Appears 3 times
+Answers: ['B' 'B' 'B']
+
+Question: Select the most accurate option: What is the evidence for the existence of a sup..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Select the most accurate option: What is the isophotal diameter used for in meas..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Select the most accurate option: What is the main advantage of ferroelectric mem..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Select the most accurate option: What is the main advantage of ferroelectric mem..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Select the most accurate option: What is the reason behind the adoption of a log..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Select the most accurate option: What is the reason behind the designation of Cl..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Select the most accurate option: What is the reason behind the largest externall..
+Appears 3 times
+Answers: ['D' 'D' 'D']
+
+Question: Select the most accurate option: What is the reason for the sun appearing slight..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Select the most accurate option: What was Pierre de Fermat's solution to the pro..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Select the most accurate option: Which of the following statements accurately de..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Select the most accurate option: Which of the following statements accurately de..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Select the most accurate option: Who proposed the concept of "maximal accelerati..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Select the most accurate option: Who proposed the concept of "maximal accelerati..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Which of the following is correct? What are amorphous ferromagnetic metallic all..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Which of the following is correct? What are permutation-inversion groups? from t..
+Appears 2 times
+Answers: ['E' 'E']
+
+Question: Which of the following is correct? What are the Navier-Stokes equations? based o..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Which of the following is correct? What happens to excess base metal as a soluti..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Which of the following is correct? What is resistivity? carefully...
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Which of the following is correct? What is the Landau-Lifshitz-Gilbert equation ..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Which of the following is correct? What is the SI unit of the physical quantity ..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Which of the following is correct? What is the concept of simultaneity in Einste..
+Appears 3 times
+Answers: ['A' 'A' 'A']
+
+Question: Which of the following is correct? What is the definition of an improper rotatio..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Which of the following is correct? What is the definition of dimension in mathem..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Which of the following is correct? What is the estimated redshift of CEERS-93316..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Which of the following is correct? What is the explanation for the effective sup..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Which of the following is correct? What is the order parameter that breaks the e..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Which of the following is correct? What is the piezoelectric strain coefficient ..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Which of the following is correct? What is the piezoelectric strain coefficient ..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Which of the following is correct? What is the reason behind the designation of ..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Which of the following is correct? What is the role of methane in Fischer-Tropsc..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Which of the following is correct? What is the significance of the change in slo..
+Appears 2 times
+Answers: ['A' 'A']
+
+Question: Which of the following is correct? What is the significance of the discovery of ..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Which of the following is correct? What is the significance of the high degree o..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Which of the following is correct? What is the significance of the high degree o..
+Appears 2 times
+Answers: ['C' 'C']
+
+Question: Which of the following is correct? What was the aim of the Gravity Probe B (GP-B..
+Appears 2 times
+Answers: ['B' 'B']
+
+Question: Which of the following is correct? Which of the following statements accurately ..
+Appears 2 times
+Answers: ['D' 'D']
+
+Question: Which of the following is correct? Who proposed the principle of "complexity fro..
+Appears 2 times
+Answers: ['B' 'B']
+
+Prompt: Choose the correct answer: What is Modified Newtonian Dynamics (MOND)? based on ...
+Appears with 2 different option sets
+
+Prompt: Choose the correct answer: What is a planetary mechanism? based on the given con...
+Appears with 2 different option sets
+
+Prompt: Choose the correct answer: What is a planetary structure? based on the given con...
+Appears with 2 different option sets
+
+Prompt: Choose the correct answer: What is accelerator-based light-ion fusion? carefully...
+Appears with 2 different option sets
+
+Prompt: Choose the correct answer: What is the Maxwell's Demon thought experiment? among...
+Appears with 3 different option sets
+
+Prompt: Choose the correct answer: What is the butterfly effect, as defined by Lorenz in...
+Appears with 2 different option sets
+
+Prompt: Choose the correct answer: What is the main sequence in astronomy? among the lis...
+Appears with 4 different option sets
+
+Prompt: Choose the correct answer: What is the most popular explanation for the shower-c...
+Appears with 2 different option sets
+
+Prompt: Choose the correct answer: What is the relationship between dielectric loss and ...
+Appears with 2 different option sets
+
+Prompt: Choose the correct answer: What is the result of the collapse of a cavitation bu...
+Appears with 2 different option sets
+
+Prompt: Choose the correct answer: What is the role of IL-10 in the formation of Tr1 cel...
+Appears with 2 different option sets
+
+Prompt: Choose the correct answer: What is water hammer? based on the given context....
+Appears with 2 different option sets
+
+Prompt: Choose the correct answer: Who was Giordano Bruno? based on the given context....
+Appears with 2 different option sets
+
+Prompt: Determine the correct option: What did Arthur Eddington discover about two of Ei...
+Appears with 2 different option sets
+
+Prompt: Determine the correct option: What is accelerator-based light-ion fusion? from t...
+Appears with 2 different option sets
+
+Prompt: Determine the correct option: What is an order parameter?...
+Appears with 2 different option sets
+
+Prompt: Determine the correct option: What is the Heisenberg uncertainty principle and h...
+Appears with 2 different option sets
+
+Prompt: Determine the correct option: What is the Maxwell's Demon thought experiment? am...
+Appears with 2 different option sets
+
+Prompt: Determine the correct option: What is the reason for recycling rare metals accor...
+Appears with 3 different option sets
+
+Prompt: Determine the correct option: What is the relationship between dielectric loss a...
+Appears with 2 different option sets
+
+Prompt: Determine the correct option: What is the role of IL-10 in the formation of Tr1 ...
+Appears with 2 different option sets
+
+Prompt: Determine the correct option: What is the significance of regularization in term...
+Appears with 2 different option sets
+
+Prompt: Determine the correct option: What was Isaac Newton's explanation for rectilinea...
+Appears with 2 different option sets
+
+Prompt: Determine the correct option: Which of the following statements accurately descr...
+Appears with 3 different option sets
+
+Prompt: Identify the correct statement: What is a trophic level in an ecological pyramid...
+Appears with 2 different option sets
+
+Prompt: Identify the correct statement: What is explicit symmetry breaking in theoretica...
+Appears with 2 different option sets
+
+Prompt: Identify the correct statement: What is the Evans balance? based on the given co...
+Appears with 2 different option sets
+
+Prompt: Identify the correct statement: What is the application of Memristor? among the ...
+Appears with 3 different option sets
+
+Prompt: Identify the correct statement: What is the most popular explanation for the sho...
+Appears with 2 different option sets
+
+Prompt: Identify the correct statement: What is the revised view of the atmosphere's nat...
+Appears with 2 different option sets
+
+Prompt: Identify the correct statement: What is the second law of thermodynamics? based ...
+Appears with 2 different option sets
+
+Prompt: Identify the correct statement: What is the significance of regularization in te...
+Appears with 2 different option sets
+
+Prompt: Identify the correct statement: Who was Giordano Bruno? based on the given conte...
+Appears with 3 different option sets
+
+Prompt: Pick the best possible answer: What is a planetary structure? based on the given...
+Appears with 2 different option sets
+
+Prompt: Pick the best possible answer: What is radiometric dating? based on the given co...
+Appears with 2 different option sets
+
+Prompt: Pick the best possible answer: What is the Maxwell's Demon thought experiment? b...
+Appears with 2 different option sets
+
+Prompt: Pick the best possible answer: What is the Optical Signal-to-Noise Ratio (OSNR)?...
+Appears with 3 different option sets
+
+Prompt: Pick the best possible answer: What is the most popular explanation for the show...
+Appears with 2 different option sets
+
+Prompt: Pick the best possible answer: What is the reason for heating metals to a temper...
+Appears with 2 different option sets
+
+Prompt: Pick the best possible answer: What was Isaac Newton's explanation for rectiline...
+Appears with 2 different option sets
+
+Prompt: Select the most accurate option: What is a Hilbert space in quantum mechanics? c...
+Appears with 2 different option sets
+
+Prompt: Select the most accurate option: What is the Erlangen program? carefully....
+Appears with 2 different option sets
+
+Prompt: Select the most accurate option: What is the Peierls bracket in canonical quanti...
+Appears with 2 different option sets
+
+Prompt: Select the most accurate option: What is the Peierls bracket in canonical quanti...
+Appears with 2 different option sets
+
+Prompt: Select the most accurate option: What is the application of Memristor? carefully...
+Appears with 2 different option sets
+
+Prompt: Select the most accurate option: What is the gravitomagnetic interaction? carefu...
+Appears with 2 different option sets
+
+Prompt: Select the most accurate option: What is the main sequence in astronomy? from th...
+Appears with 2 different option sets
+
+Prompt: Which of the following is correct? What is Modified Newtonian Dynamics (MOND)?...
+Appears with 2 different option sets
+
+Prompt: Which of the following is correct? What is the Erlangen program? based on the gi...
+Appears with 2 different option sets
+
+Prompt: Which of the following is correct? What is the Maxwell's Demon thought experimen...
+Appears with 2 different option sets
+
+Prompt: Which of the following is correct? What is the Optical Signal-to-Noise Ratio (OS...
+Appears with 2 different option sets
+
+Prompt: Which of the following is correct? What is the contrast between probability mass...
+Appears with 2 different option sets
+
+Prompt: Which of the following is correct? Which of the following statements accurately ...
+Appears with 3 different option sets
+
+Prompt: Which of the following is correct? Who was Giordano Bruno? among the listed opti...
+Appears with 2 different option sets
+Overlapping prompts: 0 (should be 0!)
+Train: 1576, validation: 424

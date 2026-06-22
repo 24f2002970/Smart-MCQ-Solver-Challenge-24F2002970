@@ -1,0 +1,78 @@
+/home/aditya29f70/smart_mcq_solver_challenge_iitm_dl_genai_proj/venv/lib/python3.10/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Tokenizer loaded : distilbert-base-uncased
+Vocab size : 30522
+Training egs created: 7880
+Input Ids shape: torch.Size([7880, 200])
+Attension masked shape: torch.Size([7880, 200])
+Data loader created with batch size 16
+Loading weights: 100%|██████████| 100/100 [00:00<00:00, 3803.15it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-uncased
+Key                     | Status     |
+------------------------+------------+-
+vocab_layer_norm.bias   | UNEXPECTED |
+vocab_transform.weight  | UNEXPECTED |
+vocab_transform.bias    | UNEXPECTED |
+vocab_layer_norm.weight | UNEXPECTED |
+vocab_projector.bias    | UNEXPECTED |
+classifier.bias         | MISSING    |
+pre_classifier.weight   | MISSING    |
+classifier.weight       | MISSING    |
+pre_classifier.bias     | MISSING    |
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+
+Model loaded on device: cuda
+
+Starting fine-tuning for 1 epochs...
+
+Epoch: 1, Batch: 49/493, Loss: 0.4050
+Epoch: 1, Batch: 99/493, Loss: 0.3086
+Epoch: 1, Batch: 149/493, Loss: 0.4736
+Epoch: 1, Batch: 199/493, Loss: 0.6882
+Epoch: 1, Batch: 249/493, Loss: 0.4930
+Epoch: 1, Batch: 299/493, Loss: 0.5266
+Epoch: 1, Batch: 349/493, Loss: 0.5558
+Epoch: 1, Batch: 399/493, Loss: 0.6216
+Epoch: 1, Batch: 449/493, Loss: 0.3457
+Epoch: 1, Average Loss: 0.49928774849396446
+Fine-tune completed!
+DistilBertForSequenceClassification(
+  (distilbert): DistilBertModel(
+    (embeddings): Embeddings(
+      (word_embeddings): Embedding(30522, 768, padding_idx=0)
+      (position_embeddings): Embedding(512, 768)
+      (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (transformer): Transformer(
+      (layer): ModuleList(
+        (0-5): 6 x TransformerBlock(
+          (attention): DistilBertSelfAttention(
+            (q_lin): Linear(in_features=768, out_features=768, bias=True)
+            (k_lin): Linear(in_features=768, out_features=768, bias=True)
+            (v_lin): Linear(in_features=768, out_features=768, bias=True)
+            (out_lin): Linear(in_features=768, out_features=768, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (sa_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+          (ffn): FFN(
+            (dropout): Dropout(p=0.1, inplace=False)
+            (lin1): Linear(in_features=768, out_features=3072, bias=True)
+            (lin2): Linear(in_features=3072, out_features=768, bias=True)
+            (activation): GELUActivation()
+          )
+          (output_layer_norm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        )
+      )
+    )
+  )
+  (pre_classifier): Linear(in_features=768, out_features=768, bias=True)
+  (classifier): Linear(in_features=768, out_features=2, bias=True)
+  (dropout): Dropout(p=0.2, inplace=False)
+)
+@map for second model: 0.7084905660377357
+[34m[1mwandb[0m: [32m[41mERROR[0m The nbformat package was not found. It is required to save notebook history.

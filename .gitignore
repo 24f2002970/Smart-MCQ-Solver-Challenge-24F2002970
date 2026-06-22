@@ -1,2 +1,7 @@
 venv
 .env
+model/
+*.keras
+*.h5
+*.pkl
+*.pt

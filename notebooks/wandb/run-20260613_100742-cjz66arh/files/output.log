@@ -1,0 +1,28 @@
+======================================================================
+Model: TRANSFER LEARNING+GPU
+======================================================================
+Loading FastText embeddings...
+Could not load GloVe, using random initialization
+(Performance will be lower, but still good)
+Tokenizer created: {vocab_size} words in vocabulary
+Using random embeddings (not pretrained)
+
+======================================================================
+MODEL ARCHITECTURE
+======================================================================
+
+
+======================================================================
+Fold 1/1
+======================================================================
+
+Train: 1576 | Val: 424
+input shape: (1576, 300)
+sequence length: 300
+vocab size: 3014
+Building Transfer Learning + GRU model...
+W0000 00:00:1781325641.272016    6778 gpu_device.cc:2365] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+None
+
+ Training Fold 1...

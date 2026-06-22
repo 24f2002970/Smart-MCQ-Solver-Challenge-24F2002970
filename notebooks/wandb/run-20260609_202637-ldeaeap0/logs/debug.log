@@ -1,0 +1,50 @@
+2026-06-09 20:26:37,464 INFO    MainThread:1948 [wandb_setup.py:_flush():81] Current SDK version is 0.27.2
+2026-06-09 20:26:37,464 INFO    MainThread:1948 [wandb_setup.py:_flush():81] Configure stats pid to 1948
+2026-06-09 20:26:37,464 INFO    MainThread:1948 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-06-09 20:26:37,464 INFO    MainThread:1948 [wandb_init.py:setup_run_log_directory():723] Logging user logs to /home/aditya29f70/smart_mcq_solver_challenge_iitm_dl_genai_proj/notebooks/wandb/run-20260609_202637-ldeaeap0/logs/debug.log
+2026-06-09 20:26:37,464 INFO    MainThread:1948 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to /home/aditya29f70/smart_mcq_solver_challenge_iitm_dl_genai_proj/notebooks/wandb/run-20260609_202637-ldeaeap0/logs/debug-internal.log
+2026-06-09 20:26:37,464 INFO    MainThread:1948 [wandb_init.py:monkeypatch_ipython():642] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7d30a63e1db0>
+2026-06-09 20:26:37,464 INFO    MainThread:1948 [wandb_init.py:init():766] calling init triggers
+2026-06-09 20:26:37,464 INFO    MainThread:1948 [wandb_init.py:init():771] wandb.init called with sweep_config: {}
+config: {'architecture': 'Tf-idf+ANN', 'epochs': 1, 'batch_size': 32, 'max_features': 5000, 'ngram_range': (1, 2), 'number_of_levels': 4, '_wandb': {}}
+2026-06-09 20:26:37,464 INFO    MainThread:1948 [wandb_init.py:init():814] starting backend
+2026-06-09 20:26:37,464 INFO    MainThread:1948 [wandb_init.py:init():829] sending inform_init request
+2026-06-09 20:26:38,116 INFO    MainThread:1948 [wandb_init.py:init():834] backend started and connected
+2026-06-09 20:26:38,134 INFO    MainThread:1948 [wandb_run.py:_label_probe_notebook():1276] probe notebook
+2026-06-09 20:26:38,136 INFO    MainThread:1948 [wandb_init.py:init():904] updated telemetry
+2026-06-09 20:26:38,186 INFO    MainThread:1948 [wandb_init.py:init():927] communicating run to backend with 90.0 second timeout
+2026-06-09 20:26:38,787 INFO    MainThread:1948 [wandb_init.py:init():972] starting run threads in backend
+2026-06-09 20:26:38,897 INFO    MainThread:1948 [wandb_run.py:_console_start():2523] atexit reg
+2026-06-09 20:26:38,897 INFO    MainThread:1948 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-06-09 20:26:38,897 INFO    MainThread:1948 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-06-09 20:26:38,897 INFO    MainThread:1948 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-06-09 20:26:38,900 INFO    MainThread:1948 [wandb_init.py:init():1010] run started, returning control to user process
+2026-06-09 20:26:38,900 INFO    MainThread:1948 [wandb_init.py:_post_run_cell_hook():612] [no run ID] resuming backend
+2026-06-09 20:26:38,906 INFO    MainThread:1948 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-06-09 20:26:38,906 INFO    MainThread:1948 [wandb_init.py:_pre_run_cell_hook():601] [no run ID] pausing backend
+2026-06-09 20:26:39,119 INFO    MainThread:1948 [wandb_init.py:_post_run_cell_hook():612] [no run ID] resuming backend
+2026-06-09 20:26:40,217 INFO    MainThread:1948 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-06-09 20:26:40,217 INFO    MainThread:1948 [wandb_init.py:_pre_run_cell_hook():601] [no run ID] pausing backend
+2026-06-09 20:26:40,219 INFO    MainThread:1948 [wandb_init.py:_post_run_cell_hook():612] [no run ID] resuming backend
+2026-06-09 20:26:40,647 INFO    MainThread:1948 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-06-09 20:26:40,647 INFO    MainThread:1948 [wandb_init.py:_pre_run_cell_hook():601] [no run ID] pausing backend
+2026-06-09 20:26:40,799 INFO    MainThread:1948 [wandb_init.py:_post_run_cell_hook():612] [no run ID] resuming backend
+2026-06-09 20:27:02,681 INFO    MainThread:1948 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-06-09 20:27:02,681 INFO    MainThread:1948 [wandb_init.py:_pre_run_cell_hook():601] [no run ID] pausing backend
+2026-06-09 20:27:03,759 INFO    MainThread:1948 [wandb_init.py:_post_run_cell_hook():612] [no run ID] resuming backend
+2026-06-09 20:27:03,764 INFO    MainThread:1948 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-06-09 20:27:03,765 INFO    MainThread:1948 [wandb_init.py:_pre_run_cell_hook():601] [no run ID] pausing backend
+2026-06-09 20:27:03,828 INFO    MainThread:1948 [wandb_init.py:_post_run_cell_hook():612] [no run ID] resuming backend
+2026-06-09 20:27:03,856 INFO    MainThread:1948 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-06-09 20:27:03,856 INFO    MainThread:1948 [wandb_init.py:_pre_run_cell_hook():601] [no run ID] pausing backend
+2026-06-09 20:27:03,913 INFO    MainThread:1948 [wandb_init.py:_post_run_cell_hook():612] [no run ID] resuming backend
+2026-06-09 20:27:36,256 INFO    MainThread:1948 [jupyter.py:save_ipynb():362] [no run ID] not saving jupyter notebook
+2026-06-09 20:27:36,261 INFO    MainThread:1948 [wandb_init.py:_pre_run_cell_hook():601] [no run ID] pausing backend
+2026-06-09 20:27:36,794 INFO    MainThread:1948 [wandb_run.py:_finish():2285] finishing run 24f2002970-indian-institute-of-technology-madras/24F2002970-t22026/ldeaeap0
+2026-06-09 20:27:36,858 INFO    MainThread:1948 [jupyter.py:save_history():435] not saving jupyter history
+2026-06-09 20:27:36,858 INFO    MainThread:1948 [jupyter.py:save_ipynb():362] not saving jupyter notebook
+2026-06-09 20:27:36,858 INFO    MainThread:1948 [wandb_init.py:_jupyter_teardown():627] cleaning up jupyter logic
+2026-06-09 20:27:36,858 INFO    MainThread:1948 [wandb_run.py:_atexit_cleanup():2490] got exitcode: 0
+2026-06-09 20:27:36,858 INFO    MainThread:1948 [wandb_run.py:_restore():2472] restore
+2026-06-09 20:27:36,858 INFO    MainThread:1948 [wandb_run.py:_restore():2478] restore done
+2026-06-09 20:27:39,040 INFO    MainThread:1948 [wandb_run.py:_footer_sync_info():3891] logging synced files
