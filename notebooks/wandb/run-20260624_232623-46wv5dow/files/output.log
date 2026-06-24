@@ -1,0 +1,15 @@
+Feature Shape: (1576, 5000)
+
+Loading pretrained Word2Vec embeddings...
+Loaded Word2Vec-300 (300 dimensions)
+
+Generating Word2Vec embeddings...
+Training embeddings: (2000, 300)
+Validation embeddings: (500, 300)
+
+Loading pretrained Word2Vec embeddings...
+Loaded Word2Vec-300 (300 dimensions)
+
+Generating Word2Vec embeddings...
+Training embeddings: (2000, 300)
+Validation embeddings: (500, 300)

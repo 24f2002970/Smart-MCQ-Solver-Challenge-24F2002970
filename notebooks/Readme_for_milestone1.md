@@ -265,6 +265,126 @@ for idx in range(X_test.shape[0]):
 top3_ans_as_result
 ```
 
+* WORD2VEC COSINE SIMILARITY
+
+```
+#************************************** WORD2VEC COSINE SIMILARITY ********************************
+import gensim.downloader as api
+
+print("\nLoading pretrained Word2Vec embeddings...")
+
+try:
+    word_vectors = api.load("word2vec-google-news-300")
+    embedding_dim = 300
+    print(f"Loaded Word2Vec-300 ({embedding_dim} dimensions)")
+except:
+    print("Could not load Word2Vec, using FastText instead")
+    word_vectors = api.load("fasttext-wiki-300")
+    embedding_dim = 300
+    print(f"Loaded FastText-300 ({embedding_dim} dimensions)")
+ 
+def get_embedding(text, word_vectors, embedding_dim=300):
+    """
+    Convert text to embedding by averaging word vectors
+    
+    This is the KEY step for semantic understanding!
+    """
+    words = text.lower().split()
+    vectors = []
+    
+    for word in words:
+        try:
+            # Get vector for this word
+            vectors.append(word_vectors[word])
+        except KeyError:
+            # Word not in vocabulary, skip
+            continue
+    
+    if len(vectors) == 0:
+        # No words found, return zero vector
+        return np.zeros(embedding_dim)
+    
+    # Average all word vectors
+    embedding = np.mean(vectors, axis=0)
+    return embedding
+
+# ========== COMPUTE EMBEDDINGS FOR ALL DATA ==========
+ 
+print("\nGenerating Word2Vec embeddings...")
+ 
+# For training data
+train_embeddings = np.array([
+    get_embedding(text, word_vectors, embedding_dim)
+    for text in train_df['prompt'].tolist()
+])
+
+print(f"Training embeddings: {train_embeddings.shape}")
+
+
+# For test data
+test_embeddings = np.array([
+    get_embedding(text, word_vectors, embedding_dim)
+    for text in test_df['prompt'].tolist()
+])
+ 
+print(f"Validation embeddings: {test_embeddings.shape}")
+
+
+def compute_word2vec_option_similarity(test_df):
+
+    predictions = []
+    similarities_prob = []
+
+
+    for idx in range(len(test_df)):
+        row= test_df.iloc[idx]
+
+        # get question embedding
+        question_embedding= test_embeddings[idx]
+
+
+        # get embedding fore all 5 options
+
+        option_embeddings = np.array([
+            get_embedding(row['A'], word_vectors, embedding_dim),
+            get_embedding(row['B'], word_vectors, embedding_dim),
+            get_embedding(row['C'], word_vectors, embedding_dim),
+            get_embedding(row['D'], word_vectors, embedding_dim),
+            get_embedding(row['E'], word_vectors, embedding_dim)
+        ])  # Shape: (5, 300)
+
+        # Reshape question for cosine_similarity
+        q = question_embedding.reshape(1, -1)  # (1, 300)
+        o = option_embeddings.reshape(5, -1)    # (5, 300)
+
+        # ========== COSINE SIMILARITY COMPUTATION ==========
+        # THIS IS THE KEY STEP!
+        
+        similarities = cosine_similarity(q, o)[0]  # Shape: (5,)
+
+      # ========== RANK OPTIONS BY SIMILARITY ==========
+        
+        # Get indices of top 3 most similar options
+        # argsort gives smallest to largest, [::-1] reverses to largest first
+        top3_indices = np.argsort(similarities)[-3:][::-1]  # [idx_best, idx_2nd, idx_3rd]
+        
+        # Convert indices to letters
+        index_to_letter = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E'}
+        top3_letters = [index_to_letter[i] for i in top3_indices]
+
+
+       # Get scores for these top 3
+        top3_scores = similarities[top3_indices]
+
+        predictions.append(' '.join(top3_letters))
+        similarities_prob.append(top3_scores)
+
+    return predictions, similarities_prob
+
+ans, _= compute_word2vec_option_similarity(test_df)
+ans
+```
+
 ## Part 4: MAP@3 (Mean Average Precision @ 3)
 
 * Concept

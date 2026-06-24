@@ -9,3 +9,9 @@ Feature Shape: (1576, 5000)
 ====================
 ====================
 ====================
+
+Loading pretrained Word2Vec embeddings...
+[==================================================] 100.0% 1662.8/1662.8MB downloaded
+Loaded Word2Vec-300 (300 dimensions)
+
+Loading pretrained Word2Vec embeddings...
