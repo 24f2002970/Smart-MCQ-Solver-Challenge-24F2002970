@@ -234,6 +234,37 @@ model.summary()
 # Gave score -> 0.74
 ```
 
+* And Cosine Similarity Computation
+```
+# ========================================== COMPUTE SIMILARITY FOR EACH VALIDATION QUESTION ===========================
+
+predictions_tfidf=[]
+similarities_debug=[]
+top3_ans_pred=[]
+top3_ans_as_result=[]
+
+for idx in range(X_test.shape[0]):
+    # Get validation text vector
+    test_vec= X_test[idx].reshape(1,-1).toarray()
+
+    # compute similarity with all training vectors
+    similarities= cosine_similarity(test_vec, X_train)[0]
+
+    # Get top 3 most similar training example
+    top3_indices= np.argsort(similarities)[-3:][::-1]
+    top3_scores= similarities[top3_indices]
+
+    predictions_tfidf.append(top3_indices)
+    similarities_debug.append(top3_scores)
+
+    top3_ans= [train_df.iloc[index]['answer'] for index in top3_indices]
+    top3_ans_pred.append(top3_ans)
+
+    join_top3_ans= ''.join(top3_ans)
+    top3_ans_as_result.append(join_top3_ans)
+top3_ans_as_result
+```
+
 ## Part 4: MAP@3 (Mean Average Precision @ 3)
 
 * Concept
