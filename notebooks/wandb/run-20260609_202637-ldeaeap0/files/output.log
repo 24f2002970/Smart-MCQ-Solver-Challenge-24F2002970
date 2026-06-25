@@ -1,4 +1,0 @@
-Feature Shape: (1576, 5000)
-W0000 00:00:1781017000.681338    1948 gpu_device.cc:2365] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
-Skipping registering GPU devices...
-[1m50/50[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 8ms/step - accuracy: 0.6466 - loss: 1.3025 - val_accuracy: 0.9387 - val_loss: 0.6458
