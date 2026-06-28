@@ -5,3 +5,5 @@ model/
 *.h5
 *.pkl
 *.pt
+wandb/
+notebooks/wandb/
